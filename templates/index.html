@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <style>
+        main
+        {
+            /* center contents */
+            text-align: center;
+            margin-left: 0px;
+        }
+        .footer
+        {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        #hugemaintext
+        {
+            font-size:1000%;
+            text-transform: uppercase;
+            line-height: 0.8;
+            font-family: "Arial", sans-serif;
+            margin: 0em 0;
+        }
+        #bigmaintext
+        {
+            font-size:850%;
+            text-transform: uppercase;
+            line-height: 0.8;
+            font-family: "Arial", sans-serif;
+            margin: 0em 0;
+        }
+        #mediummaintext
+        {
+            font-size:700%;
+            text-transform: uppercase;
+            line-height: 0.8;
+            font-family: "Arial", sans-serif;
+            margin: 0em 0;
+        }
+        #smallmaintext
+        {
+            font-size:600%;
+            text-transform: uppercase;
+            line-height: 0.8;
+            font-family: "Arial", sans-serif;
+            margin: 0em 0;
+        }
+        #tinymaintext
+        {
+            font-size:450%;
+            text-transform: uppercase;
+            line-height: 0.8;
+            font-family: "Arial", sans-serif;
+            margin: 0em 0;
+        }
+    </style>
+
+    <body style="background-color:{{ bgcolor }};">
+        <main class="container p-5">
+            <div style="color:{{ textcolor }};">
+                <p style="font-family: 'Courier New', Courier, monospace">
+                    {{ light }} The year is {{ year }}. The month is {{ month }}. {{ season }}
+                </p>
+                <p id={{textsize}} style="text-shadow: 3px 2px {{ shadow }};" style="color:{{ textcolor }};">
+                    <i class="fa fa-{{ s1 }}" aria-hidden="true"></i>
+                    {{ p1 }} <br> {{ p2 }} <br> {{ p3 }} <br> {{ p4 }}
+                </p>
+                <div class="footer" style="font-family: 'Courier New', Courier, monospace">
+                    <p>
+                        <button type="button" class="btn btn-light"><a href="/" style="text-decoration: none;">NEW</a></button>
+                    </p>
+                    <p>
+                        <a href="/about" style="text-decoration: none;" style="color:{{ textcolor }};">&#169; Lova Blåvarg 2018.</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
+{% endblock %}
+
